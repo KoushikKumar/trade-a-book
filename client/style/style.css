@@ -1,0 +1,789 @@
+body {
+  background-color:#ddbf89;
+  height:95vh;
+}
+
+.outer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+.book-cover {
+  width:70%;
+  background-color:#884444;
+  height:92vh;
+  margin-top:20px;
+  margin-left:10px;
+  position:relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pages {
+    width:98%;
+    height:88vh;
+    position: absolute;
+}
+
+.page {
+  width:50%;
+  background-color:white;
+  height:88vh;
+  display:inline-block;
+  position: absolute;
+}
+
+.page-left {
+  border-right: 1px solid grey;
+  left:5px;
+  background: -webkit-linear-gradient(left, white 90%, #DDD); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, white 90%, #DDD); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, white 90%, #DDD); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, white 90%, #DDD); /* Standard syntax */
+}
+
+.page-right {
+  border-left: 1px solid grey;
+  right:5px;
+  background: -webkit-linear-gradient(right, white 90%, #DDD); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, white 90%, #DDD); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, white 90%, #DDD); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, white 90%, #DDD); /* Standard syntax */
+}
+
+.page1 {
+    left:2px;
+}
+
+.page2 {
+    left:3px;
+    border-left:1px solid grey;
+}
+
+.page3 {
+    border-left:1px solid grey;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.page4 {
+    right:2px;
+}
+
+.page5 {
+    right:3px;
+    border-right:1px solid grey;
+}
+
+.page6 {
+    border-right:1px solid grey;
+}
+
+.page-outer-container {
+    width: 100%;
+}
+
+.book-title-and-author-container {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.book-title {
+    width:100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family : Californian FB;
+    font-size: 2vw;
+    word-wrap: break-word;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.book-author {
+    width:100%;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+    font-family : Baskerville Old Face;
+    color : #968C8F;
+    font-size: 1.1vw;
+}
+
+.book-author::before {
+    content: "-\00a0"
+}
+
+.book-outer-container {
+    width: 100%;
+    height: 80vh;
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.book-container {
+    width: 26%;
+    height: 23vh;
+    display: flex;
+}
+
+.book-container:nth-child(3n) {
+    margin-right:6px;
+}
+
+.book-image {
+    width:100%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.page-footer {
+    width: 100%;
+    height: 8vh;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.previous-page-container {
+    width: 100%;
+    height: 8vh;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    
+}
+
+.previous-page {
+    margin-left: 15px;
+    font-family : Garamond;
+    cursor: pointer;
+}
+
+.page-number-container-left {
+    width: 100%;
+    height: 8vh;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.page-number-container-right {
+    width: 100%;
+    height: 8vh;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.page-number {
+    font-family : Garamond;
+}
+
+.next-page-container {
+    width: 100%;
+    height: 8vh;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.next-page {
+    margin-right: 20px;
+    font-family : Garamond;
+    cursor: pointer;
+}
+
+.book-details-right-page-container {
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book-image-details-container {
+    width: 90%;
+    height: 35vh;
+    margin-top: 15px;
+    display: flex;
+}
+
+.book-image-details-inner-container {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+}
+
+.book-image-container-info {
+    width: 50%;
+    flex-grow: 1;
+    border: 1px solid grey;
+}
+
+.book-details-container-info {
+    width: 50%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.book-detail-info {
+    width: 95%;
+    height: 3vh;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family:  Palatino Linotype;
+    font-size: 2.2vh;
+    padding-left: 25px;
+}
+
+.book-author-info::before {
+    content: "Author:\00a0";
+    font-weight: bold;
+}
+
+.book-pages-info::before {
+    content: "No Of Pages:\00a0";
+    font-weight: bold;
+}
+
+.book-price-info::before {
+    content: "Price:\00a0";
+    font-weight: bold;
+}
+
+.book-year-info::before {
+    content: "Publication Year:\00a0";
+    font-weight: bold;
+}
+
+.book-description-container-info {
+    width: 90%;
+    height: 15vh;
+}
+
+.book-description-inner-container-info {
+    width: 100%;
+    height: 15vh;
+    word-wrap: break-word;
+    text-align: justify;
+    font-family : Palatino Linotype;
+    color : #5B595A;
+    font-size: 2vh;
+    overflow-y: auto;
+}
+
+.request-button-container-info {
+    width: 90%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.request-button-info {
+    height: 5vh;
+    min-width: 30%;
+    background-color: #D9534F;
+    border: 1px solid #D9534F;
+    cursor: pointer;
+    color: white;
+    font-family : Iskoola Pota;
+    font-size: 1.3vw;
+}
+
+.request-status-button-info {
+    height: 5vh;
+    min-width: 30%;
+    background-color: #D9534F;
+    border: 1px solid #D9534F;
+    cursor: default;
+    color: white;
+    font-family : Iskoola Pota;
+    font-size: 1.3vw;
+}
+
+.request-status-button-info:focus {
+    outline: none;
+}
+
+.request-button-info:hover {
+    background-color: #af4b4b;
+}
+
+.request-book-error-message {
+    color: red;
+    font-size: 2vh;
+    width:90%;
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-line-info {
+    width: 90%;
+    height: 0.02vh;
+    background-color: black;
+}
+
+.seller-information-container-info {
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seller-information-info {
+    width: 100%;
+    height:2.2vh;
+    display: flex;
+    align-items: center;
+}
+
+.seller-information-title-info {
+    font-family : Palatino Linotype;
+    color : #121212;
+    font-weight: bold;
+    font-size: 2.2vh;
+}
+
+.seller-information-name-info {
+    font-family : Plantagenet Cherokee;
+    color : #424142;
+    font-size: 2vh;
+}
+
+.seller-information-address-info {
+    font-family : Plantagenet Cherokee;
+    color : #424142;
+    font-size: 1.6vh;
+    margin-top: -5px;
+}
+
+.buyer-information-container {
+    width: 90%;
+    max-height: 19vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1vh;
+}
+
+.buyer-information-header {
+    width: 100%;
+    height: 3vh;
+    font-family : Palatino Linotype;
+    color : #121212;
+    font-weight: bold;
+    font-size: 2.2vh;
+}
+
+.buyer-information {
+    width: 100%;
+    height: 14vh;
+    border: 1px solid grey;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    align-items: center;
+}
+
+.buyer-information-status {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #af4b4b;
+}
+
+.buyer {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.buyer:nth-child(even) {
+     background-color: #E7E7E7;
+}
+
+.buyer-name-and-address {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family : Plantagenet Cherokee;
+    color : #424142;
+}
+
+.buyer-name {
+    width: 100%;
+    height: 2vh;
+    font-size: 1.8vh;
+    display: flex;
+    align-items: center;
+}
+
+.buyer-address {
+    width: 100%;
+    height: 3vh;
+    overflow-y: auto;
+    font-size: 1.5vh;
+    display: flex;
+    align-items: center;
+}
+
+.request-status {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    height: 4vh;
+}
+
+.request-accept {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.request-reject {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.request-accept:hover {
+    background-color: #7df481;
+}
+
+.request-reject:hover {
+    background-color: #fb6969;
+}
+
+.add-book-input-form-container {
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+.add-book-input-form {
+    width: 100%;
+}
+
+.add-book-input-form textarea {
+    overflow: auto;
+    resize: none;
+}
+
+.add-book-input-form-submit-container {
+    width: 30%;
+    height: 4.5vh;
+    
+}
+
+.add-book-input-form-submit {
+    width: 100%;
+    background-color: #D9534F;
+    border: 1px solid #D9534F;
+    height: 4.5vh;
+    color: white;
+}
+
+.add-book-input-form-submit:hover {
+    background-color: #af4b4b;
+}
+
+.iphone-container {
+    width: 20%;
+    height: 75vh;
+    background-color: #f7fafb;
+    border: 1px solid black;
+    display: inline-flex;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iphone-mike {
+    width: 1vh;;
+    height: 1vh;
+    background-color: black;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.iphone-sensor {
+    width: 20%;
+    height: 1.1vh;
+    background-color: black;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.iphone-screen {
+    width: 90%;
+    height: 55vh;
+    border: 1px solid black;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.iphone-screen-content {
+    width: 100%;
+    height:43vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar-buttons-container {
+    width: 100%;
+    align-self: flex-start;
+    height:6vh;
+    display: flex;
+}
+
+.navbar-buttons {
+    cursor: pointer;
+    font-family : Iskoola Pota;
+    font-size: 1.2vw;
+    border:1px solid black;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.navbar-buttons:hover {
+    background-color: #DDD;
+    text-decoration: none;
+}
+
+.navbar-buttons:focus {
+    text-decoration: none;
+    color: black;
+}
+
+.my-books-button {
+    width:50%;
+    flex-grow: 1;
+    border-left: none;
+}
+
+.add-books-button {
+    width:50%;
+    flex-grow: 1;
+    border-left: none;
+    border-right: none;
+}
+
+.logo {
+    font-family : Century;
+    font-size : 2.5vw;
+    color : #231F20;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.logo:hover, .logo:focus {
+    text-decoration: none;
+    color:#231F20;
+}
+
+.profile-form-update-container {
+    width: 90%;
+    height: 33vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.profile-update-input {
+    margin-bottom: 2vh;
+}
+
+.signup-form-container {
+    width: 90%;
+    height: 33vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-container {
+    width: 90%;
+    height: 33vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    width: 100%;
+    height: 16vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.input-password {
+    margin-top: -1vh;
+}
+
+.input-text-area {
+    margin-top: -1vh;
+}
+
+.input-text-area .form-control {
+    overflow: auto;
+    resize: none;
+}
+
+.login-form-error-message {
+    color: red;
+    font-size: 2vh;
+}
+
+.signup-form-error-message {
+    color: red;
+    font-size: 2vh;
+}
+
+.profile-update-form-error-message {
+    color: red;
+    font-size: 2vh;
+}
+
+.add-book-form-error-message {
+    color: red;
+    font-size: 2vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -6vh;
+}
+
+.iphone-screen-buttons-container {
+    width: 100%;
+    height:12vh;
+    display: flex;
+    align-items: center;
+}
+
+.iphone-screen-buttons-inner-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.is-already-a-member {
+    font-family : Myriad Pro;
+    font-size: 2.2vh;
+    cursor: pointer;
+    height:5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.is-already-a-member:focus {
+    text-decoration: none;
+}
+
+.iphone-screen-buttons {
+    width: 100%;
+    height:7vh;
+    display: flex;
+    align-self: flex-end;
+}
+
+.brand-buttons {
+    background-color: #D9534F;
+    border: 1px solid #514C4E;
+    cursor: pointer;
+    font-family : Iskoola Pota;
+    font-size: 1.5vw;
+    border-top-color: #514C4E;
+    color : #FCFAFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-buttons:hover {
+    background-color: #af4b4b;
+    text-decoration: none;
+    color: #FCFAFC;
+}
+
+.brand-buttons:focus {
+    text-decoration: none;
+    color: #FCFAFC;
+}
+
+.left-button {
+    flex-grow: 1;
+    border-right-color: #514C4E;
+    border-left: none;
+}
+
+.right-button {
+    flex-grow: 1;
+    border-left-color: #D9534F;
+    border-right: none;
+}
+
+.right-button:hover {
+    border-left-color: #af4b4b;
+}
+
+.iphone-unlock {
+    width:7.5vh;
+    height:7.5vh;
+    border: 1px solid black;
+    margin-top: 20px;
+    border-radius: 30px;
+    background-color:white;
+    box-shadow: 1px 1px #ccc;
+}
