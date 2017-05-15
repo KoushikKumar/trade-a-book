@@ -1,7 +1,7 @@
 {
   "name": "trade-a-book",
   "version": "1.0.0",
-  "description": "Alternatively you can launch the app from the Terminal:",
+  "description": "A user can request a book or trade a book",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
